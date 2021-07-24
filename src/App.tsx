@@ -1,11 +1,19 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
+import Home from './components/home/Home';
+import './font/font.scss'
+
 
 function App() {
   return (
-    <div>
-
-    </div>
+    <div className='App'>
+    <header >
+      <div className='containerTitle'> 
+          <h1>InfoMeteo</h1>
+      </div>
+    </header>
+    <Home/>
+          </div>
   );
 }
 
