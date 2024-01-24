@@ -1,4 +1,4 @@
-$primaryColor: #0e8be1;
+@import "../style/gobalStylecolor.scss";
 
 .wheatherDisplay {
   height: 90px;
@@ -7,7 +7,7 @@ $primaryColor: #0e8be1;
   min-width: 284px;
   margin-bottom: 40px;
   .city {
-    color: $primaryColor;
+    color: $secondary;
   }
   .tempWeathercontainer {
     display: flex;
@@ -17,11 +17,13 @@ $primaryColor: #0e8be1;
     font-weight: bold;
     font-size: 20px;
     margin-top: 0;
+    color: $container;
   }
   .weather1 {
     font-size: 16px;
     margin-top: 0;
     margin-bottom: 16px;
     margin-left: 10px;
+    color: $container;
   }
 }

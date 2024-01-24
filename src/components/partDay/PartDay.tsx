@@ -1,28 +1,44 @@
-import React from 'react'
-import './partDay.scss'
+import React from "react";
+import "./partDay.scss";
 
-const PartDay = (props:any) => {
-
-
-    const {setPeriod,period} = props
-
-
-    const handlePartDay = (e:any,day:number) => {
-           e.preventDefault()
-           setPeriod(day)
-    }
-
-    console.log(props);
-    return (
-        <div className='partDay'>
-            <ul>
-                <li className={period === 1 ? 'liIsSelect':''} onClick={(e:any) => handlePartDay(e,1)}>Matin</li>
-                <li className={period === 2 ? 'liIsSelect':''} onClick={(e:any) => handlePartDay(e,2)}>Après-midi</li>
-                <li className={period === 3? 'liIsSelect':''} onClick={(e:any) => handlePartDay(e,3)}>Soir</li>
-            </ul>
-        </div>
-
-    )
+interface PartDayProps {
+  setPeriod: (value: number) => void;
+  period: number;
 }
 
-export default PartDay
+const PartDay: React.FC<PartDayProps> = ({ setPeriod, period }) => {
+  const handlePartDay = (
+    e: React.MouseEvent<HTMLLIElement, MouseEvent>,
+    day: number
+  ) => {
+    e.preventDefault();
+    setPeriod(day);
+  };
+
+  return (
+    <div className="partDay">
+      <ul>
+        <li
+          className={period === 1 ? "liIsSelect" : ""}
+          onClick={(e: any) => handlePartDay(e, 1)}
+        >
+          Matin
+        </li>
+        <li
+          className={period === 2 ? "liIsSelect" : ""}
+          onClick={(e: any) => handlePartDay(e, 2)}
+        >
+          Après-midi
+        </li>
+        <li
+          className={period === 3 ? "liIsSelect" : ""}
+          onClick={(e) => handlePartDay(e, 3)}
+        >
+          Soir
+        </li>
+      </ul>
+    </div>
+  );
+};
+
+export default PartDay;

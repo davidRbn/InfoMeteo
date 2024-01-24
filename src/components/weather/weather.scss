@@ -1,28 +1,38 @@
-.weather {
-  background-color: #fff;
-  height: 300px;
-  display: flex;
-  width: 70%;
-  min-width: 472px;
-  margin: auto;
-  border-radius: 10px;
+@import "../style/gobalStylecolor.scss";
 
-  .weather-daySelect {
-    width: 60%;
+.containerWeather {
+  height: 100%;
+  width: 100%;
+  .weather {
+    background-color: $primary;
+    height: 300px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
+    width: 70%;
+    min-width: 472px;
+    margin: auto;
+    border-radius: 10px;
 
-  .weather-display-part {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    // width: 25%;
-    width: 100%;
+    // position: absolute;
+    // transform: translate(-50%, -50%);
+    // top: 50%;
+    // left: 50%;
+
+    .weather-daySelect {
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .weather-display-part {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      // width: 25%;
+      width: 100%;
+    }
   }
 }
-
 @media (max-width: 600px) {
   .weather {
     min-width: 100%;

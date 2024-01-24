@@ -1,22 +1,35 @@
-$primaryColor: #0e8be1;
-
+@import "./components//style/gobalStylecolor.scss";
 html,
 body,
 #root,
 .App {
   width: 100%;
-  max-height: 100vh;
+  height: 100vh;
   margin: 0;
-  background-color: #eeeeee;
 }
 
 .App {
   .containerTitle {
     text-align: center;
     h1 {
-      color: $primaryColor;
+      color: $primary;
       font-family: "Yomogi", cursive;
       font-size: 4rem;
+      margin-top: 0;
+      padding-top: 40px;
     }
   }
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
 }

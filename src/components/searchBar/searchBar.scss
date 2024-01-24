@@ -1,4 +1,4 @@
-$primaryColor: #0e8be1;
+@import "../style/gobalStylecolor.scss";
 
 .searchBar {
   margin: 70px 0;
@@ -11,14 +11,15 @@ $primaryColor: #0e8be1;
     .buttonSearch {
       height: 35px;
       border-radius: 15px;
-      border: 2px solid gray;
+      border: 1px solid $border;
+      width: 200px;
     }
     input:focus,
     .buttonSearch:focus {
       outline: none;
     }
     .buttonSearch {
-      background-color: $primaryColor;
+      background-color: $primary;
       color: white;
       margin-left: 20px;
       cursor: pointer;
@@ -26,18 +27,20 @@ $primaryColor: #0e8be1;
   }
   .resultCity {
     height: 200px;
+    width: 200px;
     overflow-y: scroll;
     position: absolute;
     z-index: 10;
-    background-color: #eeeeee;
-    border: 2px solid gray;
+    background-color: $secondary;
+    // border: 2px solid $border;
     border-radius: 5px;
     .resultCity::-webkit-scrollbar {
       width: 1px;
+      background-color: $secondary;
     }
     .sectionResult {
       height: 30px;
-      border-bottom: 2px solid gray;
+      border-bottom: 2px solid $border;
       cursor: pointer;
 
       p {

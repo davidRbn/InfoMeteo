@@ -1,14 +1,16 @@
+@import "../style/gobalStylecolor.scss";
+
 .daySelect {
   height: 200px;
   //   align-self: flex-start;
   overflow-y: scroll;
   padding-left: 0;
   cursor: pointer;
-  background-color: #eeeeee;
+  background-color: rgba($container, 0.3);
   border-radius: 5px;
 
   .dayIsSelect {
-    background-color: #0e8be1;
+    background-color: $secondary;
     color: white;
   }
   li {
@@ -22,7 +24,6 @@
 @media (max-width: 600px) {
   .daySelect {
     display: flex;
-    background-color: white;
     margin: 0;
     text-align: center;
     li {
